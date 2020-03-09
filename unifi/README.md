@@ -42,13 +42,19 @@ config interface 'lan'
 	option force_link '1'
 	option type 'bridge'
 	option proto 'static'
-	option ipaddr '10.20.8.XXX'
+	option ipaddr '10.20.32.54'
 	option netmask '255.255.252.0'
-	option gateway '10.20.8.1'
+	option gateway '10.20.32.1'
 	option ip6assign '60'
 ```
 
-Set `ipaddr` to the real IP address of the device.
+Set `ipaddr` to the real IP address of the device. 
+(Alternatively, use ifconfig. 
+	-> [ifconfig (interface name) (ip address desired) netmask (255.255.252.0)]
+	-> change ip address. 10.20.32.55, netmask 255.255.252.0, gateway 10.20.32.1, etc.
+	-> 
+	
+	
 
 Set `/etc/config/wireless` file to (check if file originally looks simlarly, like `path`s should be the same) by doing:
 
